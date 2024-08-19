@@ -15,7 +15,7 @@
     <div class="user-image">
       <p
         style="
-        text-align: center;
+          text-align: center;
           font-size: 70px;
           position: absolute;
           font: italic;
@@ -27,26 +27,9 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aliquid
         nihil minus quam ex non dolorem totam neque ullam ea?
       </p>
-      <img
-        src="profile.jpg"
-        alt=""
-        style="
-          background-color: #63bf93;
-          height: 25rem;
-          width: 22.5rem;
-          border-top-left-radius: 30%;
-          border-top-right-radius: 57%;
-          border-bottom-left-radius: 55%;
-          border-bottom-right-radius: 40%;
-          object-fit: cover;
-          outline: 5px;
-          outline-offset: 10px;
-          outline-color: antiquewhite;
-          outline-style: double;
-          position: relative;
-        "
-      />
+      <img src="profile.jpg" alt="" class="profile" />
     </div>
+    <p class="about">About Me</p>
     <div
       style="
         display: flex;
@@ -56,46 +39,15 @@
         margin-bottom: 22px;
       "
     >
-      <p
-        style="
-          text-align: center;
-          background-color: bisque;
-          color: #173a2b;
-          padding: 10px;
-          font-size: 22px;
-          width: 70rem;
-          border-radius: 35px;
-        "
-      >
+      <p class="about-text">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non quaerat,
         ex consequuntur molestias eos velit consectetur dolore, saepe
         perferendis doloremque cupiditate est illum facere quibusdam?
       </p>
     </div>
-    <p
-      style="
-        font-weight: 800;
-        font-size: 80px;
-        text-align: center;
-        color: bisque;
-        margin-top: 0;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        text-shadow: 0px 3px 6px;
-      "
-    >
-      About Me
-    </p>
 
     <div style="display: flex; align-items: center; justify-content: center">
-      <div
-        style="
-          display: flex;
-          justify-content: space-between;
-          width: 70%;
-          align-items: center;
-        "
-      >
+      <div class="skill-section">
         <p style="font-size: 60px; color: antiquewhite">Skills</p>
         <div style="display: flex; flex-direction: column; gap: 10px">
           <div style="display: flex; gap: 10px">
@@ -157,14 +109,123 @@
     justify-content: center;
   }
 
+  .profile {
+    background-color: #63bf93;
+    height: 25rem;
+    width: 22.5rem;
+    animation: disfigure 5s infinite alternate;
+    object-fit: cover;
+    outline: 5px;
+    outline-offset: 10px;
+    outline-color: antiquewhite;
+    outline-style: double;
+    position: relative;
+  }
+
+  .about {
+    font-weight: 800;
+    font-size: 80px;
+    text-align: center;
+    color: bisque;
+    margin-top: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-shadow: 0px 3px 6px;
+  }
+
+  .about-text {
+    text-align: center;
+    background-color: bisque;
+    color: #173a2b;
+    padding: 10px;
+    font-size: 22px;
+    width: 70rem;
+    border-radius: 35px;
+  }
+
+  .skill-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+    align-items: center;
+  }
+
   .skill-patch {
     background-color: antiquewhite;
     color: #173a2b;
-    width: 8rem;
-    height: 8rem;
+    height: 7rem;
+    width: 7rem;
     border-top-left-radius: 65%;
     border-top-right-radius: 50%;
     border-bottom-left-radius: 45%;
     border-bottom-right-radius: 85%;
+  }
+
+  @keyframes disfigure {
+    0%,
+    100% {
+      border-top-left-radius: 30%;
+      border-top-right-radius: 57%;
+      border-bottom-left-radius: 55%;
+      border-bottom-right-radius: 40%;
+    }
+    25% {
+      border-top-left-radius: 57%;
+      border-top-right-radius: 30%;
+      border-bottom-left-radius: 40%;
+      border-bottom-right-radius: 55%;
+    }
+    50% {
+      border-top-left-radius: 40%;
+      border-top-right-radius: 55%;
+      border-bottom-left-radius: 30%;
+      border-bottom-right-radius: 57%;
+    }
+    75% {
+      border-top-left-radius: 55%;
+      border-top-right-radius: 40%;
+      border-bottom-left-radius: 57%;
+      border-bottom-right-radius: 30%;
+    }
+  }
+
+  @media screen and (min-width: 320px) {
+    .user-image p {
+      visibility: hidden;
+    }
+    .profile {
+      width: 80%;
+      height: auto;
+    }
+    .about {
+      font-size: 50px;
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+    
+  }
+  @media screen and (min-width: 320px) {
+  }
+  @media screen and (min-width: 320px) {
+  }
+  @media screen and (min-width: 1024px) {
+    .user-image p {
+      visibility: visible;
+    }
+    .profile {
+      width: 22.5rem;
+      height: 25rem;
+    }
+    .about {
+      font-size: 80px;
+    }
+    .skill-section {
+      flex-direction: row;
+    }
+    .skill-patch {
+      width: 8rem;
+    height: 8rem;
+    }
   }
 </style>
