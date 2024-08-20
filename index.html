@@ -12,7 +12,11 @@
     />
   </head>
   <body>
-    <nav class="navbar"><a href="https://noclueportfolios.vercel.app/" class="nav-head">noclueportfolios</a></nav>
+    <nav class="navbar">
+      <a href="https://noclueportfolios.vercel.app/" class="nav-head"
+        >noclueportfolios</a
+      >
+    </nav>
     <h1 class="heading">Lorem, ipsum.</h1>
     <p class="sub-heading">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo placeat
@@ -56,8 +60,8 @@
 
     <div style="display: flex; align-items: center; justify-content: center">
       <div class="skill-section">
-        <p style="font-size: 60px; color: antiquewhite">Skills</p>
-        <div style="display: flex; flex-direction: column; gap: 10px">
+        <p style="font-size: 60px; color: antiquewhite; background-color: bisque; padding: 15px; color: #173a2b; border-top-left-radius: 35%; border-top-right-radius: 30%; border-bottom-left-radius: 50%; border-bottom-right-radius: 30%;">Skills</p>
+        <div class="skill-grid">
           <div style="display: flex; gap: 10px">
             <div class="skill-patch"></div>
             <div class="skill-patch"></div>
@@ -151,10 +155,16 @@
     border-radius: 35px;
   }
 
-  .skill-section {
+  .skill-grid {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .skill-section {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
     width: 70%;
     align-items: center;
   }
@@ -227,12 +237,14 @@
     .about {
       font-size: 80px;
     }
-    .skill-section {
-      flex-direction: row;
-    }
     .skill-patch {
       width: 8rem;
       height: 8rem;
     }
+    .skill-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
   }
 </style>
