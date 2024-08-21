@@ -60,22 +60,37 @@
 
     <div style="display: flex; align-items: center; justify-content: center">
       <div class="skill-section">
-        <p style="font-size: 60px; color: antiquewhite; background-color: bisque; padding: 15px; color: #173a2b; border-top-left-radius: 35%; border-top-right-radius: 30%; border-bottom-left-radius: 50%; border-bottom-right-radius: 30%;">Skills</p>
+        <p
+          style="
+            font-size: 60px;
+            color: antiquewhite;
+            background-color: bisque;
+            padding: 15px;
+            color: #173a2b;
+            border-top-left-radius: 35%;
+            border-top-right-radius: 30%;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 30%;
+          "
+        >
+          Skills
+        </p>
         <div class="skill-grid">
           <div style="display: flex; gap: 10px">
-            <div class="skill-patch"></div>
-            <div class="skill-patch"></div>
-            <div class="skill-patch"></div>
+            <div class="skill-patch one"></div>
+            <div class="skill-patch two"></div>
+            <div class="skill-patch three"></div>
           </div>
 
           <div style="display: flex; gap: 10px">
-            <div class="skill-patch"></div>
-            <div class="skill-patch"></div>
-            <div class="skill-patch"></div>
+            <div class="skill-patch four"></div>
+            <div class="skill-patch five"></div>
+            <div class="skill-patch six"></div>
           </div>
         </div>
       </div>
     </div>
+    <div></div>
   </body>
 </html>
 
@@ -180,6 +195,25 @@
     border-bottom-right-radius: 85%;
   }
 
+  .skill-patch.one {
+    animation: bounce 2s infinite;
+  }
+  .skill-patch.two {
+    animation: bounce 2s infinite 0.2s;
+  }
+  .skill-patch.three {
+    animation: bounce 2s infinite 0.4s;
+  }
+  .skill-patch.four {
+    animation: bounce 2s infinite 0.6s;
+  }
+  .skill-patch.five {
+    animation: bounce 2s infinite 0.8s;
+  }
+  .skill-patch.six {
+    animation: bounce 2s infinite 1s;
+  }
+
   @keyframes disfigure {
     0%,
     100% {
@@ -205,6 +239,24 @@
       border-top-right-radius: 40%;
       border-bottom-left-radius: 57%;
       border-bottom-right-radius: 30%;
+    }
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0%);
+    }
+    25% {
+      transform: translateY(-15%);
+    }
+    50% {
+      transform: translateY(0%);
+    }
+    75% {
+      transform: translateY(-15%);
+    }
+    100% {
+      transform: translateY(0%);
     }
   }
 
@@ -242,9 +294,9 @@
       height: 8rem;
     }
     .skill-grid {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-  }
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
   }
 </style>
