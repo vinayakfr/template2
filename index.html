@@ -77,16 +77,27 @@
         </p>
         <div class="skill-grid">
           <div style="display: flex; gap: 10px">
-            <div class="skill-patch one"></div>
-            <div class="skill-patch two"></div>
-            <div class="skill-patch three"></div>
-          </div>
-
-          <div style="display: flex; gap: 10px">
-            <div class="skill-patch four"></div>
-            <div class="skill-patch five"></div>
-            <div class="skill-patch six"></div>
-          </div>
+            <div class="skill-patch one">
+                <i class="fab fa-python fa-4x"></i> <!-- Python Icon -->
+            </div>
+            <div class="skill-patch two">
+                <i class="fab fa-js fa-4x"></i> <!-- JavaScript Icon -->
+            </div>
+            <div class="skill-patch three">
+                <i class="fab fa-html5 fa-4x"></i> <!-- HTML Icon -->
+            </div>
+        </div>
+        
+        <div style="display: flex; gap: 10px">
+            <div class="skill-patch four">
+                <i class="fab fa-css3-alt fa-4x"></i> <!-- CSS Icon -->
+            </div>
+            <div class="skill-patch five">
+                <i class="fab fa-java fa-4x"></i> <!-- Java Icon -->
+            </div>
+            <div class="skill-patch six">
+                <i class="fas fa-code fa-4x"></i> <!-- C++ Icon (using a generic code icon) -->
+            </div>
         </div>
       </div>
     </div>
@@ -173,7 +184,7 @@
   .skill-grid {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
   }
 
   .skill-section {
@@ -185,6 +196,9 @@
   }
 
   .skill-patch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: bisque;
     color: #173a2b;
     height: 7rem;
